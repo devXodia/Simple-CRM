@@ -14,7 +14,6 @@ export class DialogAddUserComponent {
   firestore: Firestore = inject(Firestore);
   user = new User();
   birthDate: Date;
-  updateID;
   loading = false;
 
   constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>){
@@ -25,8 +24,17 @@ export class DialogAddUserComponent {
     this.loading = true;
     this.user.birthDate = this.birthDate.getTime();
     const docRef = await addDoc(collection(this.firestore, "users"), this.user.toJson())
-    this.updateID = docRef.id;
     this.loading = false;
     this.dialogRef.close();
   }
+
+async addUser(){
+
 }
+
+
+
+
+
+}
+

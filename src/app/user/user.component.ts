@@ -31,8 +31,9 @@ allUsers = [];
       this.allUsers = [];
       list.forEach(user => {
         const userData = user.data();
+        userData['id'] = user.id;
         this.allUsers.push(userData);
-        console.log('Array with Users:', this.allUsers);
+        console.log('User Data:', this.allUsers);
       });
     })
   }
