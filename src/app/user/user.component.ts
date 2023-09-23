@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
+import { User } from 'src/models/user.class';
+
 
 @Component({
   selector: 'app-user',
@@ -8,6 +11,18 @@ import { TooltipPosition } from '@angular/material/tooltip';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  positionOptions: TooltipPosition[] = ['above', 'after', 'before', 'below', 'left', 'right'];
-  position = new FormControl(this.positionOptions[0]);
-}
+user = new User();
+
+  
+
+  constructor(public dialog: MatDialog){
+    
+  }
+
+  openDialog(){
+    this.dialog.open(DialogAddUserComponent)
+  }
+
+  }
+  
+
