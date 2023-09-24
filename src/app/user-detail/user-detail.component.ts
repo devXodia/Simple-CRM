@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Firestore, collection, addDoc, onSnapshot, doc } from '@angular/fire/firestore';
+import { Firestore, addDoc, onSnapshot, doc } from '@angular/fire/firestore';
 import { User } from 'src/models/user.class';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
@@ -33,11 +33,13 @@ export class UserDetailComponent implements OnInit{
 
   editUserDetails(){
     const dialog = this.dialog.open(DialogEditUserComponent)
-    dialog.componentInstance.user = this.currentUser;
+    dialog.componentInstance.userId = this.userId;
+    dialog.componentInstance.user = new User(this.currentUser.toJson());
   }
 
   editMenu(){
     const dialog = this.dialog.open(DialogEditAddressComponent)
-    dialog.componentInstance.user = this.currentUser;
+    dialog.componentInstance.user = new User(this.currentUser.toJson());
+    dialog.componentInstance.userId = this.userId;
   }
 }
