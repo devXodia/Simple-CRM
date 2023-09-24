@@ -1,3 +1,8 @@
+.card{
+  background-color: #0f012d;
+  color: white;
+}
+
 mat-card-content{
     padding-left: 0;
     padding-right: 0;
@@ -41,14 +46,14 @@ mat-card-content{
       }
 
       &:hover{
-        background-color: rgba(0,0,0,0.04);
+        background-color: rgba(255,255,255,0.04);
       }
   }
 
 
 
   th {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.4);
     font-size: 14px;
     font-weight: 500;
     text-align: start;

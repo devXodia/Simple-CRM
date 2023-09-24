@@ -1,18 +1,21 @@
 .container{
     display: flex;
-    height: 90vh;
-    width: 80vw;
     max-width: 100%;
+    flex-wrap: wrap;
+    
 }
 
 .card{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 200px;
-    width: 300px;
-    background-color: darkblue;
+    background-color: #0f012d;
     color: white;
-
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(255,255,255,0.04);
+    }
     mat-card-title{
         font-size: 32px;
     }
@@ -21,5 +24,39 @@
         font-size: 32px;
         font-weight: 500;
         color: red;
+    }
+}
+
+.current-users{
+    width: 100%;
+}
+
+.row-container{
+    display: flex;
+    height: 200px !important;
+    flex:1;
+    mat-card{
+        width: 100%;
+    }
+}
+
+.charts-container{
+    width: 100%;
+    min-height: 400px;
+}
+
+.chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #0f012d;
+    width: 50%;
+    canvas{
+        height: 400px !important;
+        width: 100% !important;
+       &:hover{
+        cursor: pointer;
+       }
     }
 }

@@ -1,6 +1,7 @@
 .mat-drawer-container{
     height: 100vh;
-    background-color: black;
+    background-color: #0A011D;
+    border-right: 1px solid #0f012d;
 }
 
 .menu-icon{
@@ -9,7 +10,8 @@
 
 .sidenav{
     width: 300px;
-    
+    background-color: #0A011D;
+    color: white;
 }
 .logo-container{
     border-bottom: 1px solid rgba(0,0,0,0.04);
@@ -22,6 +24,10 @@
 mat-toolbar-row, mat-toolbar{
     min-height: 56px;
     height: 56px;
+}
+
+.top-bar{
+    background-color: #0A011D;
 }
 
 .menu-items{
@@ -39,7 +45,8 @@ mat-toolbar-row, mat-toolbar{
             margin-right: 16px;
         }
         &:hover{
-            background-color: rgba(0,0,0,0.04);
+            background-color: rgba(255,255,255,0.04);
+            border-radius: 8px;
         }
 
         &:focus{

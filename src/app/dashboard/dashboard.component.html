@@ -1,18 +1,34 @@
 <div class="container">
+  <mat-card class="card mr-16 current-users">
+    <mat-card-title class="pt-16">Current Users:</mat-card-title>
+    <mat-card-content class="mt-32 green">12</mat-card-content>
+  </mat-card>
+  <div class="row-container mt-32">
+  <mat-card class="card mr-16">
+    <mat-card-title>Expenses</mat-card-title>
+    <mat-card-content class="mt-32">- $900000.00</mat-card-content>
+  </mat-card>
 
-<mat-card class="card mr-16">
-    <mat-card-title class="pt-16">Expenses</mat-card-title>
-    <mat-card-content class="mt-32">- $90000.00</mat-card-content>
-</mat-card>
-
-<mat-card class="card mr-16">
-    <mat-card-title class="pt-16">Profit</mat-card-title>
+  <mat-card class="card mr-16">
+    <mat-card-title >Profit</mat-card-title>
     <mat-card-content class="mt-32 green">+ $1200000.00</mat-card-content>
-</mat-card>
+  </mat-card>
 
-<mat-card class="card mr-16">
-    <mat-card-title class="pt-16">Sold Contracts</mat-card-title>
-    <mat-card-content class="mt-32 white">78</mat-card-content>
-</mat-card>
-
+  <mat-card class="card mr-16">
+    <mat-card-title>Sold Contracts</mat-card-title>
+    <mat-card-content class="mt-32 green">78</mat-card-content>
+  </mat-card>
+</div>
+<div class="charts-container mt-32">
+    <mat-card class="chart">
+        <canvas baseChart
+  [type]="'pie'"
+  [datasets]="pieChartDatasets"
+  [labels]="pieChartLabels"
+  [options]="pieChartOptions"
+  [plugins]="pieChartPlugins"
+  [legend]="pieChartLegend">
+</canvas>
+      </mat-card>
+</div>
 </div>

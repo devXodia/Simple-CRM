@@ -26,6 +26,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
+import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.com
     MatCardModule,
     MatMenuModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
