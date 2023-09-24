@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    height: 90vh;
+    width: 80vw;
+    max-width: 100%;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    background-color: darkblue;
+    color: white;
+
+    mat-card-title{
+        font-size: 32px;
+    }
+
+    mat-card-content{
+        font-size: 32px;
+        font-weight: 500;
+        color: red;
+    }
+}
