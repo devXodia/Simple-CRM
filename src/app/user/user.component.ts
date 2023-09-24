@@ -33,7 +33,6 @@ allUsers = [];
         const userData = user.data();
         userData['id'] = user.id;
         this.allUsers.push(userData);
-        console.log('User Data:', this.allUsers);
       });
     })
   }
