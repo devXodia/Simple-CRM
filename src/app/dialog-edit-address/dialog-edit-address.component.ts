@@ -19,9 +19,11 @@ export class DialogEditAddressComponent {
   constructor(public dialogRef: MatDialogRef<DialogEditAddressComponent>){}
 
   async saveUser(){
+    this.loading = true;
     let userRef = this.getUserDoc();
     await updateDoc(userRef, this.user.toJson())
     this.dialogRef.close();
+    this.loading = false;
   }
   
 
