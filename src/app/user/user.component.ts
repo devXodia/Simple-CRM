@@ -5,6 +5,7 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
 import { User } from 'src/models/user.class';
 import { Firestore, collection, addDoc, onSnapshot, } from '@angular/fire/firestore';
 import { inject } from '@angular/core';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -16,7 +17,7 @@ firestore: Firestore = inject(Firestore);
 unsubUserList;
 allUsers = [];
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog ){
     
   }
 
@@ -33,6 +34,7 @@ allUsers = [];
         const userData = user.data();
         userData['id'] = user.id;
         this.allUsers.push(userData);
+        
       });
     })
   }

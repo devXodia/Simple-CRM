@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="card mr-16 current-users">
     <mat-card-title class="pt-16">Current Users:</mat-card-title>
-    <mat-card-content class="mt-32 green">12</mat-card-content>
+    <mat-card-content class="mt-32 green">{{ allUsers.length }}</mat-card-content>
   </mat-card>
   <div class="row-container mt-32">
   <mat-card class="card mr-16">
@@ -39,7 +39,7 @@
             [mode]="mode"
             [value]="value"> *ngIf="!loaded"></mat-spinner>
             <div *ngIf="loaded">
-            <mat-card class="news-card"  *ngFor="let item of [].constructor(10); let i = index">
+            <mat-card class="news-card"  *ngFor="let item of [].constructor(18); let i = index">
               <a *ngIf="loaded" target="_blank" href="{{ this.data[i].url }}">
                 <div>
                 <mat-card-title *ngIf="loaded" class="news-article-title"><img *ngIf="loaded" src="{{this.data[i].image}}">{{ this.data[i].headline }}</mat-card-title>
