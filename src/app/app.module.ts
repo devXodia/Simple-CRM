@@ -27,6 +27,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { NgChartsModule } from 'ng2-charts';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,8 @@ import { NgChartsModule } from 'ng2-charts';
     MatProgressBarModule,
     MatCardModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     NgChartsModule

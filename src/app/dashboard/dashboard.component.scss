@@ -2,7 +2,8 @@
     display: flex;
     max-width: 100%;
     flex-wrap: wrap;
-    
+    // max-height: 90vh;
+    // overflow-y: scroll;
 }
 
 .card{
@@ -43,6 +44,9 @@
 .charts-container{
     width: 100%;
     min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .chart{
@@ -51,7 +55,7 @@
     align-items: center;
     height: 400px;
     background-color: #0f012d;
-    width: 50%;
+    flex: 1;
     canvas{
         height: 400px !important;
         width: 100% !important;
@@ -59,4 +63,99 @@
         cursor: pointer;
        }
     }
+}
+
+.news{
+    display: flex;
+    align-items: center;
+    height: 400px;
+    background-color: #0f012d;
+    color: white;
+    flex:1;
+    margin-right: 16px;
+    mat-card-title{
+        font-size: 32px;
+        margin-top: 32px;
+    }
+
+    mat-card-content{
+        width: 100%;
+        margin-top: 16px;
+        font-size: 32px;
+        font-weight: 500;
+        color: red;
+    }
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
+}
+
+.news-container{
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%; 
+    overflow-y: scroll;
+    max-height: 400px;
+    height: 300px;
+    margin-top: 0;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    mat-card-content{
+        margin: 0;
+    }
+    mat-card-title{
+        font-size: 14px;
+        margin-top: 0;
+    }
+    mat-card{
+        border-radius: 10px;
+        &:hover{
+            cursor: pointer;
+            background-color: rgba(255,255,255,0.04);
+        }
+    }
+}
+
+.news-card{
+    background-color: #0f012d;
+    display: flex;
+    height: 150px;
+    a{
+        color: black;
+        outline: none;
+        text-decoration: none;
+    }
+
+    img{
+        border-radius: 100%;
+        padding: 16px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+.news-article{
+    font-size: 16px !important;
+}
+
+.news-article-title{
+    display: flex;
+    align-items: center;
+    color: white;
 }

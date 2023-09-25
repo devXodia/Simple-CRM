@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ChartOptions } from 'chart.js';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
   title = 'Sales';
 
@@ -49,8 +52,27 @@ export class DashboardComponent {
   } ];
   public pieChartLegend = true;
   public pieChartPlugins = [];
+  private API_KEY = "ck8ldphr01qmbnh45p2gck8ldphr01qmbnh45p30"
+  private category = "general"
+  data;
+  loaded = false;
   
+  async showNews() {
+    const response = await fetch(`https://finnhub.io/api/v1/news?category=${this.category}&token=${this.API_KEY}`);
+    const news = await response.json();
+    this.data = news;
+    this.loaded = true;
+  }
+
+  color: ThemePalette = 'primary';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 50;
   constructor() {
+    
+  }
+
+  ngOnInit(): void {
+    this.showNews();
   }
 
 }
